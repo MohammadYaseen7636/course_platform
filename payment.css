@@ -1,0 +1,134 @@
+/* Global Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    text-align: center;
+    padding: 1rem 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2rem;
+}
+
+main {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 20px;
+}
+
+/* Payment Details Section */
+#payment-details, #verification {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+}
+
+h2 {
+    color: #2c3e50;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 0.5rem;
+    margin-top: 0;
+}
+
+/* Payment Options */
+#payment-options {
+    margin-bottom: 1.5rem;
+}
+
+#payment-options h3 {
+    margin-bottom: 1rem;
+    color: #2c3e50;
+}
+
+#payment-options button,
+#payment-form button,
+#verification button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 1rem;
+}
+
+#payment-options button:hover,
+#payment-form button:hover,
+#verification button:hover {
+    background-color: #2980b9;
+}
+
+/* Payment Forms */
+#card-payment-form,
+#upi-payment-form {
+    margin-top: 1.5rem;
+}
+
+#card-payment-form input,
+#upi-payment-form input,
+#verification input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 1rem;
+    border: 1px solid #bdc3c7;
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+#card-payment-form input:focus,
+#upi-payment-form input:focus,
+#verification input:focus {
+    outline: none;
+    border-color: #3498db;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #34495e;
+    font-weight: bold;
+}
+
+/* Verification Section */
+#verification {
+    text-align: center;
+}
+
+#verification p {
+    margin-bottom: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    main {
+        padding: 0 10px;
+    }
+
+    #payment-details,
+    #verification {
+        padding: 1.5rem;
+    }
+
+    #payment-options button,
+    #payment-form button,
+    #verification button {
+        width: 100%;
+        margin: 5px 0;
+    }
+}

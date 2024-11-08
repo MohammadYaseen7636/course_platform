@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SciAstra - Payment</title>
+    <link rel="stylesheet" href="./payment.css">
+</head>
+<body>
+    <header>
+        <h1>SciAstra Payment</h1>
+    </header>
+    <main>
+        <section id="payment-details">
+            <h2>Course Payment</h2>
+            <p id="selected-course"></p>
+            <div id="payment-options">
+                <h3>Select Payment Method:</h3>
+                <button onclick="selectPaymentMethod('credit')">Credit Card</button>
+                <button onclick="selectPaymentMethod('debit')">Debit Card</button>
+                <button onclick="selectPaymentMethod('upi')">UPI</button>
+            </div>
+            <div id="payment-form" style="display: none;">
+                <form id="card-payment-form" style="display: none;">
+                    <label for="card-number">Card Number:</label>
+                    <input type="text" id="card-number" required>
+                    <label for="expiry-date">Expiry Date:</label>
+                    <input type="text" id="expiry-date" placeholder="MM/YY" required>
+                    <label for="cvv">CVV:</label>
+                    <input type="text" id="cvv" required>
+                </form>
+                <form id="upi-payment-form" style="display: none;">
+                    <label for="upi-id">UPI ID:</label>
+                    <input type="text" id="upi-id" required>
+                </form>
+                <button onclick="processPayment()">Process Payment</button>
+            </div>
+        </section>
+        <section id="verification" style="display: none;">
+            <h2>Two-Step Verification</h2>
+            <p>Enter the verification code sent to your registered mobile number:</p>
+            <input type="text" id="verification-code">
+            <button onclick="verifyCode()">Verify</button>
+        </section>
+    </main>
+    <script src="payment.js"></script>
+</body>
+</html>
